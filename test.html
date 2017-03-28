@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>test</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <style>
+
+    </style>
+    <body>
+
+
+             <form>
+                <input id="name"  type="text" placeholder="name"><br>
+                <input id="surname" type="text" placeholder="surname"><br><br>
+                <input id="kod" type="text"><br>
+                <input id="add" type="text" placeholder="kodu daxil et"><br>
+                <input id="submit" type="submit" value="submit">
+                <p id="text"></p>   
+             </form>
+       
+       
+    </body>
+<script>
+    var name = document.getElementById('name');
+    var surname = document.getElementById('surname');
+    var kod = document.getElementById('kod');
+    var add = document.getElementById('add');
+    var text = document.getElementById('text');
+    var submit = document.getElementById('submit');
+
+    var actions = ['*', '/', '+', '-'];
+    var rand = Math.floor((Math.random() * 3));
+ 	var num1 = Math.floor((Math.random() * 100) + 1);	
+    var num2 = Math.floor((Math.random() * 100) + 1);
+
+ 	kod.value = num1 + actions[rand] + num2;
+
+    submit.addEventListener('click', function(){
+        if (kod.value ===  add.value){
+            document.write('Yes');
+        }
+        else{
+            document.write('try again');
+        }
+    });
+</script>
+</html>
